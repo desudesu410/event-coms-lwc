@@ -18,6 +18,16 @@
 					</c-button>
 				</template>
 			</lightning-layout-item>
+			<lightning-layout-item flexibility="auto" padding="around-small" onbuttonclick={handleDivide}>
+				<template for:each={divisors} for:item="divisor">
+					<c-button
+						key={divisor}
+						label={divisor}
+						data-divisor={divisor}
+						icon="utility:insert_tag_field">
+					</c-button>
+				</template>
+			</lightning-layout-item>
       <lightning-layout-item flexibility="auto" padding="around-small">
         <lightning-button
           label="Add"
